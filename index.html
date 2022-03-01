@@ -24,7 +24,34 @@
   </head>
   <body>
     <!-- Header Starts here -->
-    <header></header>
+    <header>
+      <!-- set title -->
+      <div class="text-center">
+        <h1 class="title">Mobile World</h1>
+        <p class="sub-title">Search any phone</p>
+      </div>
+
+      <div class="container">
+        <!-- search area -->
+        <div class="d-flex my-4">
+          <input
+            id="input-value"
+            class="form-control me-2"
+            type="search"
+            placeholder="Search here"
+            aria-label="Search"
+          />
+          <button onclick="searchPhone()" class="search-btn" type="submit">
+            Search
+          </button>
+        </div>
+
+        <!-- alert message -->
+        <div class="alert alert-warning text text-center" role="alert">
+          No phone found!
+        </div>
+      </div>
+    </header>
 
     <!-- Main Starts here -->
     <main></main>

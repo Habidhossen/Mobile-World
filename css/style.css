@@ -1,3 +1,23 @@
-body {
+/* Set default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+/* search button */
+.search-btn {
+  background-color: #6495ed;
+  padding: 10px 25px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+.form-control:focus {
+  /* border-color: #6495ed;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); */
+}
+/* alert */
+.alert {
+  padding: 10px 20px;
 }
