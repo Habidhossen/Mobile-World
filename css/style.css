@@ -77,3 +77,23 @@
   color: #fff;
   border: 1px solid #006464;
 }
+#spinner {
+  display: none;
+}
+.modal-body p {
+  margin: 2px;
+  font-size: 14px;
+  color: #292929;
+}
+.modal-phone-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #141414;
+  margin: 25px 0 0 0;
+}
+.modal-subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #141414;
+  margin: 20px 0 8px 0;
+}
