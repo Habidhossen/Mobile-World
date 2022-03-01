@@ -89,7 +89,9 @@ const displayPhoneDetails = (phone) => {
                       ? phone.releaseDate
                       : "No release date found!"
                   }</p>
-                  <p>Brand: ${phone.brand}</p>
+                  <p><span class="bold-modal-text" >Brand:</span> ${
+                    phone.brand
+                  }</p>
 
                   <h5 class="modal-subtitle">Main features</h5>
 
@@ -134,11 +136,11 @@ const displayPhoneDetails = (phone) => {
   modalBody.appendChild(div);
 };
 
-/* loading spinner function */
+/* loading-spinner function */
 const loadingSpinner = (value) => {
   document.getElementById("spinner").style.display = value;
 };
-/* alert message function */
+/* alert-message function */
 const alertMessage = (value) => {
   document.getElementById("alert").style.display = value;
 };
