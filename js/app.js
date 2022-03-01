@@ -18,7 +18,8 @@ const searchPhone = () => {
 const displayPhone = (phones) => {
   const resultContainer = document.getElementById("result-container");
   resultContainer.innerHTML = "";
-  phones.forEach((phone) => {
+  const first20Phone = phones.slice(0, 20);
+  first20Phone.forEach((phone) => {
     // console.log(phone);
     const div = document.createElement("div");
     div.classList.add("col");
@@ -60,7 +61,7 @@ const loadPhoneDetails = (phoneId) => {
 
 /* display phone details */
 const displayPhoneDetails = (phone) => {
-  console.log(phone);
+  console.log(phone.others);
   const modalBody = document.getElementById("modal-body");
   modalBody.innerHTML = "";
   const div = document.createElement("div");
@@ -84,16 +85,23 @@ const displayPhoneDetails = (phone) => {
 
                   <h5 class="modal-subtitle">Main features</h5>
                   <p>Storage: ${phone.mainFeatures.storage}</p>
-                  <p>Display Size: ${phone.mainFeatures.displaySize}</p>
                   <p>Memory: ${phone.mainFeatures.memory}</p>
+                  <p>Display Size: ${phone.mainFeatures.displaySize}</p>
+                  <p>Chipset: ${phone.mainFeatures.chipSet}</p>
+                  <p>Sensors: ${phone.mainFeatures.sensors}</p>
 
                   <h5 class="modal-subtitle">Others</h5>
-                  <p>Release date: 22 february 2022</p>
-                  <p>Brand: Samsung</p>
+                  <p>Bluetooth: ${phone.others.Bluetooth}</p>
+                  <p>GPS: ${phone.others.GPS}</p>
+                  <p>NFC: ${phone.others.NFC}</p>
+                  <p>Radio: ${phone.others.Radio}</p>
+                  <p>USB: ${phone.others.USB}</p>
+                  <p>WLAN: ${phone.others.WLAN}</p>
   
   `;
   modalBody.appendChild(div);
 };
+
 /* loading spinner function */
 const loadingSpinner = (value) => {
   document.getElementById("spinner").style.display = value;
