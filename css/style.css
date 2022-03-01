@@ -5,9 +5,21 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+/* title & sub title */
+.title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #141414;
+}
+.sub-title {
+  font-size: 16px;
+  color: #292929;
+}
+
 /* search button */
 .search-btn {
-  background-color: #6495ed;
+  background-color: #076d6d;
   padding: 10px 25px;
   color: white;
   font-size: 16px;
@@ -18,8 +30,8 @@
 }
 .search-btn:hover {
   background-color: transparent;
-  color: #6495ed;
-  border: 1px solid #6495ed;
+  color: #076d6d;
+  border: 1px solid #076d6d;
 }
 /* .form-control:focus {
   border-color: #6495ed;
@@ -42,7 +54,11 @@
 .phone-title {
   font-size: 20px;
   font-weight: 600;
+  color: #141414;
   margin: 20px 0 8px 0;
+}
+.phone-text {
+  color: #141414;
 }
 
 .details-btn {
@@ -57,7 +73,7 @@
   transition: 0.2s;
 }
 .details-btn:hover {
-  background-color: transparent;
-  color: #008080;
-  border: 1px solid #008080;
+  background-color: #006464;
+  color: #fff;
+  border: 1px solid #006464;
 }
