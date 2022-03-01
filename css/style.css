@@ -33,10 +33,10 @@
   color: #076d6d;
   border: 1px solid #076d6d;
 }
-/* .form-control:focus {
-  border-color: #6495ed;
+.form-control:focus {
+  border-color: #076d6d;
   box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
-} */
+}
 
 /* alert */
 .alert {
@@ -51,8 +51,15 @@
   text-align: center;
   padding: 26px;
   border-radius: 10px;
-  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px,
-    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  /* box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px; */
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  transition: 0.2s;
+}
+.custom-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 .phone-title {
   font-size: 20px;

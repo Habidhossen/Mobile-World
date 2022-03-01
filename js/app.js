@@ -18,13 +18,17 @@ const searchPhone = () => {
 const displayPhone = (phones) => {
   const resultContainer = document.getElementById("result-container");
   resultContainer.innerHTML = "";
-  const first20Phone = phones.slice(0, 20);
 
-  first20Phone.forEach((phone) => {
-    // console.log(phone);
-    const div = document.createElement("div");
-    div.classList.add("col");
-    div.innerHTML = `
+  if (phones.length == 0) {
+    // call alert message
+    alertMessage("block");
+  } else {
+    const first20Phone = phones.slice(0, 20);
+    first20Phone.forEach((phone) => {
+      // console.log(phone);
+      const div = document.createElement("div");
+      div.classList.add("col");
+      div.innerHTML = `
     
         <div class="custom-card">
             <div class="text-center">
@@ -46,8 +50,11 @@ const displayPhone = (phones) => {
             </div>
     
     `;
-    resultContainer.appendChild(div);
-  });
+      resultContainer.appendChild(div);
+      // call alert message
+      alertMessage("none");
+    });
+  }
   // call spinner
   loadingSpinner("none");
 };
@@ -62,7 +69,7 @@ const loadPhoneDetails = (phoneId) => {
 
 /* display phone details */
 const displayPhoneDetails = (phone) => {
-  console.log(phone.others);
+  console.log(phone);
   const modalBody = document.getElementById("modal-body");
   modalBody.innerHTML = "";
   const div = document.createElement("div");
@@ -130,4 +137,8 @@ const displayPhoneDetails = (phone) => {
 /* loading spinner function */
 const loadingSpinner = (value) => {
   document.getElementById("spinner").style.display = value;
+};
+/* alert message function */
+const alertMessage = (value) => {
+  document.getElementById("alert").style.display = value;
 };
