@@ -2,6 +2,8 @@
 const searchPhone = () => {
   const input = document.getElementById("input-value");
   const inputValue = input.value;
+  // call spinner
+  loadingSpinner("block");
 
   const url = `https://openapi.programming-hero.com/api/phones?search=${inputValue}`;
   fetch(url)
@@ -44,6 +46,8 @@ const displayPhone = (phones) => {
     `;
     resultContainer.appendChild(div);
   });
+  // call spinner
+  loadingSpinner("none");
 };
 
 /* load phone details */
@@ -56,13 +60,12 @@ const loadPhoneDetails = (phoneId) => {
 
 /* display phone details */
 const displayPhoneDetails = (phone) => {
-  console.log(phone.mainFeatures);
+  console.log(phone);
   const modalBody = document.getElementById("modal-body");
   modalBody.innerHTML = "";
   const div = document.createElement("div");
   div.classList.add("div");
   div.innerHTML = `
-  
   
                 <div class="text-center">
                     <img
@@ -72,7 +75,11 @@ const displayPhoneDetails = (phone) => {
                     />
                   </div>
                   <h5 class="modal-phone-title">${phone.name}</h5>
-                  <p>Release date: 22 february 2022</p>
+                  <p>${
+                    phone.releaseDate
+                      ? phone.releaseDate
+                      : "No release date found!"
+                  }</p>
                   <p>Brand: ${phone.brand}</p>
 
                   <h5 class="modal-subtitle">Main features</h5>
@@ -84,9 +91,10 @@ const displayPhoneDetails = (phone) => {
                   <p>Release date: 22 february 2022</p>
                   <p>Brand: Samsung</p>
   
-  
-  
-  
   `;
   modalBody.appendChild(div);
+};
+/* loading spinner function */
+const loadingSpinner = (value) => {
+  document.getElementById("spinner").style.display = value;
 };
