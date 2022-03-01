@@ -20,7 +20,7 @@
 /* search button */
 .search-btn {
   background-color: #076d6d;
-  padding: 10px 25px;
+  padding: 8px 40px;
   color: white;
   font-size: 16px;
   font-weight: 500;
@@ -37,6 +37,7 @@
   border-color: #6495ed;
   box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 } */
+
 /* alert */
 .alert {
   padding: 10px 20px;
@@ -45,8 +46,10 @@
   display: none;
 }
 
+/* custom card */
 .custom-card {
-  padding: 26px 16px;
+  text-align: center;
+  padding: 26px;
   border-radius: 10px;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px,
     rgba(17, 17, 26, 0.05) 0px 8px 32px;
@@ -55,12 +58,13 @@
   font-size: 20px;
   font-weight: 600;
   color: #141414;
-  margin: 20px 0 8px 0;
+  margin: 30px 0 8px 0;
 }
 .phone-text {
   color: #141414;
 }
 
+/* detailes button */
 .details-btn {
   display: block;
   background-color: #008080;
@@ -77,9 +81,13 @@
   color: #fff;
   border: 1px solid #006464;
 }
+
+/* spinner */
 #spinner {
   display: none;
 }
+
+/* modal */
 .modal-body p {
   margin: 2px;
   font-size: 14px;
@@ -96,4 +104,8 @@
   font-weight: 600;
   color: #141414;
   margin: 20px 0 8px 0;
+}
+.bold-modal-text {
+  color: #000;
+  font-weight: 500;
 }

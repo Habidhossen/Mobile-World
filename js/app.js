@@ -19,6 +19,7 @@ const displayPhone = (phones) => {
   const resultContainer = document.getElementById("result-container");
   resultContainer.innerHTML = "";
   const first20Phone = phones.slice(0, 20);
+
   first20Phone.forEach((phone) => {
     // console.log(phone);
     const div = document.createElement("div");
@@ -29,7 +30,7 @@ const displayPhone = (phones) => {
             <div class="text-center">
                 <img
                     src="${phone.image}"
-                    class="w-75"
+                    class="w-50"
                     alt="..."
                 />
             </div>
@@ -84,19 +85,43 @@ const displayPhoneDetails = (phone) => {
                   <p>Brand: ${phone.brand}</p>
 
                   <h5 class="modal-subtitle">Main features</h5>
-                  <p>Storage: ${phone.mainFeatures.storage}</p>
-                  <p>Memory: ${phone.mainFeatures.memory}</p>
-                  <p>Display Size: ${phone.mainFeatures.displaySize}</p>
-                  <p>Chipset: ${phone.mainFeatures.chipSet}</p>
-                  <p>Sensors: ${phone.mainFeatures.sensors}</p>
+
+                  
+                  <p><span class="bold-modal-text">Storage:</span> ${
+                    phone.mainFeatures.storage
+                  }</p>
+                  <p><span class="bold-modal-text">Memory:</span> ${
+                    phone.mainFeatures.memory
+                  }</p>
+                  <p><span class="bold-modal-text">Display Size:</span> ${
+                    phone.mainFeatures.displaySize
+                  }</p>
+                  <p><span class="bold-modal-text">Chipset:</span> ${
+                    phone.mainFeatures.chipSet
+                  }</p>
+                  <p><span class="bold-modal-text">Sensors:</span> ${
+                    phone.mainFeatures.sensors
+                  }</p>
 
                   <h5 class="modal-subtitle">Others</h5>
-                  <p>Bluetooth: ${phone.others.Bluetooth}</p>
-                  <p>GPS: ${phone.others.GPS}</p>
-                  <p>NFC: ${phone.others.NFC}</p>
-                  <p>Radio: ${phone.others.Radio}</p>
-                  <p>USB: ${phone.others.USB}</p>
-                  <p>WLAN: ${phone.others.WLAN}</p>
+                  <p><span class="bold-modal-text" >Bluetooth:</span> ${
+                    phone.others.Bluetooth
+                  }</p>
+                  <p><span class="bold-modal-text" >GPS:</span> ${
+                    phone.others.GPS
+                  }</p>
+                  <p><span class="bold-modal-text" >NFC:</span> ${
+                    phone.others.NFC
+                  }</p>
+                  <p><span class="bold-modal-text" >Radio:</span> ${
+                    phone.others.Radio
+                  }</p>
+                  <p><span class="bold-modal-text" >USB:</span> ${
+                    phone.others.USB
+                  }</p>
+                  <p><span class="bold-modal-text" >WLAN:</span> ${
+                    phone.others.WLAN
+                  }</p>
   
   `;
   modalBody.appendChild(div);

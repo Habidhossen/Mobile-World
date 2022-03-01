@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <!-- Bootstrap Stylesheet -->
@@ -28,7 +28,7 @@
       <!-- set title -->
       <div class="text-center my-3">
         <h1 class="title">Mobile World</h1>
-        <p class="sub-title">Search any phone</p>
+        <p class="sub-title">Search your favourite phone</p>
       </div>
 
       <div class="container">
@@ -41,6 +41,7 @@
             placeholder="Search here"
             aria-label="Search"
           />
+          <!-- search button -->
           <button onclick="searchPhone()" class="search-btn" type="submit">
             Search
           </button>
@@ -59,7 +60,7 @@
 
     <!-- Main Starts here -->
     <main>
-      <div class="container">
+      <div class="container mb-3">
         <div id="result-container" class="row row-cols-1 row-cols-lg-3 gy-4">
           <!-- Showing card result -->
         </div>
@@ -69,8 +70,6 @@
             <span class="visually-hidden">Loading...</span>
           </div>
         </div>
-
-        <!-- add modal -->
 
         <!-- Modal -->
         <div
@@ -94,11 +93,7 @@
                 ></button>
               </div>
               <div id="modal-body" class="modal-body">
-                <!-- modal body -->
-
-                <div></div>
-
-                <!-- modal body -->
+                <!-- modal body here... -->
               </div>
             </div>
           </div>
