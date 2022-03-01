@@ -75,7 +75,6 @@ const displayPhoneDetails = (phone) => {
   const div = document.createElement("div");
   div.classList.add("div");
   div.innerHTML = `
-  
                 <div class="text-center">
                     <img
                       src="${phone.image}"
@@ -95,7 +94,6 @@ const displayPhoneDetails = (phone) => {
 
                   <h5 class="modal-subtitle">Main features</h5>
 
-                  
                   <p><span class="bold-modal-text">Storage:</span> ${
                     phone.mainFeatures.storage
                   }</p>
@@ -114,22 +112,24 @@ const displayPhoneDetails = (phone) => {
 
                   <h5 class="modal-subtitle">Others</h5>
                   <p><span class="bold-modal-text" >Bluetooth:</span> ${
-                    phone.others.Bluetooth
+                    phone?.others?.Bluetooth
+                      ? phone.others.Bluetooth
+                      : "No data found!"
                   }</p>
                   <p><span class="bold-modal-text" >GPS:</span> ${
-                    phone.others.GPS
+                    phone?.others?.GPS ? phone.others.GPS : "No data found!"
                   }</p>
                   <p><span class="bold-modal-text" >NFC:</span> ${
-                    phone.others.NFC
+                    phone?.others?.NFC ? phone.others.NFC : "No data found!"
                   }</p>
                   <p><span class="bold-modal-text" >Radio:</span> ${
-                    phone.others.Radio
+                    phone?.others?.Radio ? phone.others.Radio : "No data found!"
                   }</p>
                   <p><span class="bold-modal-text" >USB:</span> ${
-                    phone.others.USB
+                    phone?.others?.USB ? phone.others.USB : "No data found!"
                   }</p>
                   <p><span class="bold-modal-text" >WLAN:</span> ${
-                    phone.others.WLAN
+                    phone?.others?.WLAN ? phone.others.WLAN : "No data found!"
                   }</p>
   
   `;
