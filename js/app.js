@@ -4,12 +4,11 @@ const searchPhone = () => {
   const inputValue = input.value;
   // call spinner
   loadingSpinner("block");
-
+  // fetch data
   const url = `https://openapi.programming-hero.com/api/phones?search=${inputValue}`;
   fetch(url)
     .then((response) => response.json())
     .then((data) => displayPhone(data.data));
-
   // clear input field
   input.value = "";
 };
@@ -17,19 +16,20 @@ const searchPhone = () => {
 /* display phone */
 const displayPhone = (phones) => {
   const resultContainer = document.getElementById("result-container");
+  // clear content
   resultContainer.innerHTML = "";
-
+  // condition check
   if (phones.length == 0) {
     // call alert message
     alertMessage("block");
-  } else {
+  } 
+  else {
     const first20Phone = phones.slice(0, 20);
     first20Phone.forEach((phone) => {
       // console.log(phone);
       const div = document.createElement("div");
       div.classList.add("col");
       div.innerHTML = `
-    
         <div class="custom-card">
             <div class="text-center">
                 <img
@@ -48,7 +48,6 @@ const displayPhone = (phones) => {
                   data-bs-target="#see-details">Details
                 </button>
             </div>
-    
     `;
       resultContainer.appendChild(div);
       // call alert message
@@ -69,8 +68,8 @@ const loadPhoneDetails = (phoneId) => {
 
 /* display phone details */
 const displayPhoneDetails = (phone) => {
-  console.log(phone);
   const modalBody = document.getElementById("modal-body");
+  // clear content
   modalBody.innerHTML = "";
   const div = document.createElement("div");
   div.classList.add("div");
@@ -84,9 +83,7 @@ const displayPhoneDetails = (phone) => {
                   </div>
                   <h5 class="modal-phone-title">${phone.name}</h5>
                   <p>${
-                    phone.releaseDate
-                      ? phone.releaseDate
-                      : "No release date found!"
+                    phone.releaseDate ? phone.releaseDate : "No release date found!"
                   }</p>
                   <p><span class="bold-modal-text" >Brand:</span> ${
                     phone.brand
@@ -111,10 +108,9 @@ const displayPhoneDetails = (phone) => {
                   }</p>
 
                   <h5 class="modal-subtitle">Others</h5>
+
                   <p><span class="bold-modal-text" >Bluetooth:</span> ${
-                    phone?.others?.Bluetooth
-                      ? phone.others.Bluetooth
-                      : "No data found!"
+                    phone?.others?.Bluetooth ? phone.others.Bluetooth : "No data found!"
                   }</p>
                   <p><span class="bold-modal-text" >GPS:</span> ${
                     phone?.others?.GPS ? phone.others.GPS : "No data found!"
